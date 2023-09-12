@@ -1,9 +1,13 @@
+a {
+  text-decoration: none;
+}
+
 .card {
+  height: 90%;
   border: 1px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1rem;
   transition: 0.3s ease-in-out;
-
 }
 
 .card-img {
@@ -23,8 +27,6 @@
   margin: 0;
   width: 80%;
   color: rgba(0, 0, 0, 0.6);
-  /* transition: 0.3s ease-in-out; */
-
 }
 
 .back-icon {
@@ -32,7 +34,6 @@
   transform: rotatey(180deg);
   filter: invert(100%);
   opacity: 0.4;
-  /* transition: 0.3s ease-in-out; */
 }
 
 .card:hover .back-icon {

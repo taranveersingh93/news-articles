@@ -2,8 +2,10 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import fetchArticles from '../../apiCalls';
 import CardContainer from '../CardContainer/CardContainer';
-import Card from '../CardContainer/Card/Card';
-import refineData from '../../helperFunctions';
+import {refineData} from '../../helperFunctions';
+import {Route, Routes} from 'react-router-dom'
+import ReactDOM from 'react-dom';
+import DetailView from '../DetailView/DetailView';
 
 function App() {
   const [newsItems, setNewsItems] = useState([])
@@ -16,12 +18,12 @@ function App() {
     })
   }, [])
 
-  useEffect(() => {
-    // console.log(newsItems)
-  }, [newsItems])
-
   return (
-    <CardContainer newsItems={newsItems}/>
+    <Routes>
+      <Route path='/' element={<CardContainer newsItems={newsItems}/>}/>
+      <Route path='/:id' element={<DetailView newsItems={newsItems} />}/>
+    </Routes>
+    
   );
 }
 

@@ -1,0 +1,20 @@
+.details-view {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.author, .details-source {
+  margin: 0
+}
+
+.text-box {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.details-date {
+  margin: 0;
+}
