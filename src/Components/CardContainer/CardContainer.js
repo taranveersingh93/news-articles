@@ -1,15 +1,17 @@
 import './CardContainer.css'
 import Card from './Card/Card'
 import Error from '../Error/Error'
-import Navbar from '../Navbar/Navbar'
 import Loader from '../Loader/Loader'
+import Searchbar from '../Searchbar/Searchbar'
 
-const CardContainer = ({newsItems, error, loading}) => {
-  const itemsCode = newsItems.map(newsItem => {
-    return <Card item={newsItem} />
+const CardContainer = ({itemsOfInterest, error, loading, handleSearch, searchValue}) => {
+  const itemsCode = itemsOfInterest.map(newsItem => {
+    return <Card item={newsItem} key={newsItem.id}/>
   })
+
   return (
     <>
+    {!error && !loading && <Searchbar searchValue={searchValue} handleSearch={handleSearch} />}
     {!error && !loading && <div className='card-container'>
         {itemsCode}
       </div>}

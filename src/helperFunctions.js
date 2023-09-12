@@ -12,7 +12,9 @@ const refineData = (items) => {
       source: item.source.name
     }
   })
-  return refinedArticles;
+
+  const filteredArticles = refinedArticles.filter(article => article.title !== '[Removed]')
+  return filteredArticles;
 }
 
 const humanizeDate = date => {
