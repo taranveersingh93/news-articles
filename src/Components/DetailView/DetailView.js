@@ -5,8 +5,10 @@ import { humanizeDate } from '../../helperFunctions'
 import { Link } from 'react-router-dom'
 import Error from '../Error/Error'
 import backButton from '../../images/back-icon (1).png'
+import Loader from '../Loader/Loader'
+import { render } from '@testing-library/react'
 
-const DetailView = ({newsItems}) => {
+const DetailView = ({newsItems, error, loading}) => {
   const [itemOfInterest, setItemOfInterest] = useState({})
   const itemID = useParams().id
   const [renderState, setRenderState] = useState(false)
@@ -26,7 +28,7 @@ const DetailView = ({newsItems}) => {
   
   return (
     <>
-      {renderState && <div className='details-view'>
+      {renderState && !error && <div className='details-view'>
         <Link to='/' className='backLink'>
           <img className='back-button' src={backButton}/>
         </Link>
@@ -39,7 +41,9 @@ const DetailView = ({newsItems}) => {
         <p className='details-source'>Source: {itemOfInterest.source}</p>
         <p className='author'>Author: {itemOfInterest.author? itemOfInterest.author: 'N/A'}</p>
       </div>}
-      {!renderState && <Error />}
+      {error && !loading && <Error />}
+      {!renderState && !loading && <Error />}
+      {loading && <Loader />}
     </>
   )
 }
