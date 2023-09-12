@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom'
 import './DetailView.css'
 import { useState, useEffect } from 'react'
 import { humanizeDate } from '../../helperFunctions'
+import { render } from '@testing-library/react'
+import Error from '../Error/Error'
 
 const DetailView = ({newsItems}) => {
   const [itemOfInterest, setItemOfInterest] = useState({})
@@ -33,6 +35,7 @@ const DetailView = ({newsItems}) => {
         <p className='details-source'>Source: {itemOfInterest.source}</p>
         <p className='author'>Author: {itemOfInterest.author? itemOfInterest.author: 'N/A'}</p>
       </div>}
+      {!renderState && <Error />}
     </>
   )
 }

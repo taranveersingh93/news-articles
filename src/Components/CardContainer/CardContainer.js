@@ -1,14 +1,18 @@
 import './CardContainer.css'
 import Card from './Card/Card'
+import Error from '../Error/Error'
 
-const CardContainer = ({newsItems}) => {
+const CardContainer = ({newsItems, error}) => {
   const itemsCode = newsItems.map(newsItem => {
     return <Card item={newsItem} />
   })
   return (
-    <div className='card-container'>
-      {itemsCode}
-    </div>
+    <>
+    {!error && <div className='card-container'>
+        {itemsCode}
+      </div>}
+    {error && <Error />}
+    </>
   )
 }
 
