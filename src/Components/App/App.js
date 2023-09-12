@@ -5,6 +5,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import refineData from '../../helperFunctions';
 import {Route, Routes} from 'react-router-dom'
 import ReactDOM from 'react-dom';
+import DetailView from '../DetailView/DetailView';
 
 function App() {
   const [newsItems, setNewsItems] = useState([])
@@ -20,7 +21,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<CardContainer newsItems={newsItems}/>}/>
-      <Route path='/:id' element={<h1>her</h1>} />
+      <Route path='/:id' element={<DetailView newsItems={newsItems} />}/>
     </Routes>
     
   );
