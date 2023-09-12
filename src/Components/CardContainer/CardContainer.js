@@ -6,7 +6,7 @@ import Searchbar from '../Searchbar/Searchbar'
 
 const CardContainer = ({itemsOfInterest, error, loading, handleSearch, searchValue}) => {
   const itemsCode = itemsOfInterest.map(newsItem => {
-    return <Card item={newsItem} />
+    return <Card item={newsItem} key={newsItem.id}/>
   })
 
   return (
