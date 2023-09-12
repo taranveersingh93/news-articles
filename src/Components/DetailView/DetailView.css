@@ -18,3 +18,20 @@
 .details-date {
   margin: 0;
 }
+
+.back-button {
+  margin-bottom: 20px;
+  filter: invert(100%);
+  opacity: 0.5;
+  height: 50px;
+  width: 50px;
+}
+
+.back-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.backLink {
+  width: 50px;
+}

@@ -1,6 +1,7 @@
 import './CardContainer.css'
 import Card from './Card/Card'
 import Error from '../Error/Error'
+import Navbar from '../Navbar/Navbar'
 
 const CardContainer = ({newsItems, error}) => {
   const itemsCode = newsItems.map(newsItem => {

@@ -2,8 +2,9 @@ import { useParams } from 'react-router-dom'
 import './DetailView.css'
 import { useState, useEffect } from 'react'
 import { humanizeDate } from '../../helperFunctions'
-import { render } from '@testing-library/react'
+import { Link } from 'react-router-dom'
 import Error from '../Error/Error'
+import backButton from '../../images/back-icon (1).png'
 
 const DetailView = ({newsItems}) => {
   const [itemOfInterest, setItemOfInterest] = useState({})
@@ -26,6 +27,9 @@ const DetailView = ({newsItems}) => {
   return (
     <>
       {renderState && <div className='details-view'>
+        <Link to='/' className='backLink'>
+          <img className='back-button' src={backButton}/>
+        </Link>
         <img src={itemOfInterest.image} className='details-img'/>
         <div className='text-box'>
           <p className='details-date'>{humanizeDate(itemOfInterest.date)}</p>
