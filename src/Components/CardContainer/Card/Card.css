@@ -9,6 +9,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1rem;
   transition: 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
 }
 
 .card-img {
@@ -46,6 +47,7 @@
 }
 
 .card:hover {
+  backdrop-filter: blur(50px);
   cursor: pointer;
   transform:translate(1px, 1px);
   box-shadow: 0 10px 13px 0 rgba(0, 0, 0, 0.2), 0 11px 22px 0 rgba(0, 0, 0, 0.19);
