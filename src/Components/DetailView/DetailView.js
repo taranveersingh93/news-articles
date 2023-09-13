@@ -18,7 +18,8 @@ const DetailView = ({newsItems, error, loading}) => {
   }, [newsItems])
 
   useEffect(() => {
-    if (!itemOfInterest?.id) {
+    console.log(itemOfInterest)
+    if (!itemOfInterest?.description) {
       setRenderState(false)
     } else {
       setRenderState(true)
