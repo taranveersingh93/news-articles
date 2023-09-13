@@ -1,9 +1,12 @@
 .search-container {
+  top: 150px;
+  position: relative;
   height: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .searchbar {
