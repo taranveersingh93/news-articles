@@ -12,13 +12,6 @@ const Searchbar = ({handleSearch, searchValue}) => {
       type='text'
       value={searchValue}
       onChange={(e) => {handleSearch(e.target.value)}} />
-      <div className='cross-container'>
-        <img
-          src={crossIcon}
-          name='cross-icon'
-          className='cross-icon'
-          onClick={() => {handleSearch('')}} />
-      </div>
     </div>
   )
 }

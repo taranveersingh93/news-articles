@@ -1,6 +1,13 @@
 .card-container {
+  position: relative;
+  top: 10vh;
   padding: 5vh;
   display: grid;
   grid-gap: 2em;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+}
+
+.background-video {
+  position: fixed;
+  z-index: -1;
 }
