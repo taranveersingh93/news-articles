@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import Error from '../Error/Error'
 import backButton from '../../images/back-icon (1).png'
 import Loader from '../Loader/Loader'
-import { render } from '@testing-library/react'
 
 const DetailView = ({newsItems, error, loading}) => {
   const [itemOfInterest, setItemOfInterest] = useState({})
@@ -25,6 +24,10 @@ const DetailView = ({newsItems, error, loading}) => {
       setRenderState(true)
     }
   }, [itemOfInterest])
+
+  useEffect(() => {
+    console.log(renderState, loading)
+  }, [renderState, loading])
 
   
   return (
