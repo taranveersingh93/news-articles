@@ -1,4 +1,6 @@
 .details-view {
+  position: relative;
+  top: 150px;
   padding: 20px;
   display: flex;
   flex-direction: column;

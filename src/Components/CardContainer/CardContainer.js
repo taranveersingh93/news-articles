@@ -15,10 +15,10 @@ const CardContainer = ({itemsOfInterest, error, loading, handleSearch, searchVal
   return (
     <>
     {!error && !loading && <div>
+      <Searchbar searchValue={searchValue} handleSearch={handleSearch} />
       <video autoPlay loop muted className="background-video">
         <source src={backgroundVideo} type="video/mp4" />
       </video>
-      <Searchbar searchValue={searchValue} handleSearch={handleSearch} />
       <div className='card-container'>
         {itemsCode}
       </div>
