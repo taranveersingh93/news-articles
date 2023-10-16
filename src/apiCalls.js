@@ -1,8 +1,7 @@
 const fetchArticles = () => {
-  return fetch('https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us', {
+  return fetch('https://newsapi.org/v2/top-headlines?country=us', {
     method: 'GET',
     headers: {
-      'origin': 'https://newsapi.org/v2/top-headlines?country=us',
       'x-api-key': process.env.REACT_APP_API_KEY
     }
   })
